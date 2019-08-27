@@ -7,6 +7,12 @@
     </el-steps>
     <div class="home-backups-steps">
       <div class="step">1</div>
+      <div class="step">1</div>
+      <div class="step">1</div>
+      <div class="step">1</div>
+      <div class="step">1</div>
+      <div class="step">1</div>
+      <div class="step">1</div>
     </div>
   </div>
 </template>

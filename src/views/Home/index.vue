@@ -1,7 +1,7 @@
 <template>
   <el-container class="home-page">
     <el-aside width="200px">
-      <el-menu default-active="homePlugins" class="home-page-menu" :router="true">
+      <el-menu :default-active="$route.name" class="home-page-menu" :router="true">
         <el-menu-item index="homePlugins" :route="{name: 'homePlugins'}">Plugins</el-menu-item>
         <el-menu-item index="homeBackups" :route="{name: 'homeBackups'}">Backups</el-menu-item>
       </el-menu>

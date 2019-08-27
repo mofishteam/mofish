@@ -7,7 +7,9 @@
       </div>
     </el-card>
     <el-dialog title="Add Backup" :visible.sync="showAddDialog" width="720px">
-      <add-backups v-if="showAddDialog"></add-backups>
+      <transition mode="out-in">
+        <add-backups v-if="showAddDialog"></add-backups>
+      </transition>
 <!--      <el-form ref="addBackupForm" :model="addBackupForm" label-width="100px">-->
 <!--        <el-form-item label="Name"></el-form-item>-->
 <!--        <el-form-item label="Choose config file to backup"></el-form-item>-->
