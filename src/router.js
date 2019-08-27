@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home'
 import HomePlugins from './views/Home/Plugins'
+import HomeBackups from './views/Home/Backups'
 import PluginPage from './views/PluginPage/index'
 
 Vue.use(Router)
@@ -19,6 +20,10 @@ export default new Router({
         name: 'homePlugins',
         component: HomePlugins,
         path: 'plugins'
+      }, {
+        name: 'homeBackups',
+        component: HomeBackups,
+        path: 'backups'
       }]
     }, {
       path: '/plugin',

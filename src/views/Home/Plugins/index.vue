@@ -2,7 +2,7 @@
   <section class="home-plugins">
 <!--    插件列表-->
     <el-card shadow="hover">
-      <div slot="header" class="clearfix">
+      <div slot="header">
         <span>Plugins</span>
         <el-button style="float: right; padding: 3px 0" type="text" @click="showAddDialog = true">Add plugin</el-button>
       </div>
@@ -33,22 +33,8 @@
     <el-dialog title="Add plugin" :visible.sync="showAddDialog" width="600px">
       <div class="plugin-type-switch-wrap">
         <el-tabs v-model="pluginType" class="plugin-type-switch">
-          <el-tab-pane label="Local" name="local">
-            <el-form ref="addPluginForm" :model="addLocalPluginForm" label-width="100px">
-              <el-form-item label="Name" required>
-                <el-input v-model="addLocalPluginForm.name" placeholder="Name for plugin."></el-input>
-              </el-form-item>
-              <el-form-item label="Path" required>
-                <el-input v-model="addLocalPluginForm.path" placeholder="Please input a absolute path."></el-input>
-              </el-form-item>
-              <el-form-item class="tal">
-                <el-button type="primary" @click="addLocalPlugin({})">Add plugin</el-button>
-                <el-button @click="showAddDialog = false">Cancel</el-button>
-              </el-form-item>
-            </el-form>
-          </el-tab-pane>
-          <el-tab-pane label="NPM" name="npm">
-<!--            <el-input :debounce="500" placeholder="Input name to search plugins." v-model="pluginSearchParam" class="plugin-search-input"></el-input>-->
+          <el-tab-pane label="NPM" name="npm" v-loading="!(npmList && npmList.length) || !(localList && localList.length)">
+            <!--            <el-input :debounce="500" placeholder="Input name to search plugins." v-model="pluginSearchParam" class="plugin-search-input"></el-input>-->
             <p class="text-secondary-black tac">Installed Local</p>
             <el-table :data="localList" style="width: 100%" :show-header="false">
               <el-table-column prop="name"></el-table-column>
@@ -91,6 +77,20 @@
               </el-table-column>
             </el-table>
           </el-tab-pane>
+          <el-tab-pane label="Local" name="local">
+            <el-form ref="addPluginForm" :model="addLocalPluginForm" label-width="100px">
+              <el-form-item label="Name" required>
+                <el-input v-model="addLocalPluginForm.name" placeholder="Name for plugin."></el-input>
+              </el-form-item>
+              <el-form-item label="Path" required>
+                <el-input v-model="addLocalPluginForm.path" placeholder="Please input a absolute path."></el-input>
+              </el-form-item>
+              <el-form-item class="tal">
+                <el-button type="primary" @click="addLocalPlugin({})">Add plugin</el-button>
+                <el-button @click="showAddDialog = false">Cancel</el-button>
+              </el-form-item>
+            </el-form>
+          </el-tab-pane>
         </el-tabs>
       </div>
     </el-dialog>
@@ -110,7 +110,7 @@ export default {
       // 添加插件的搜索框
       pluginSearchParam: '',
       // 插件类型
-      pluginType: 'local',
+      pluginType: 'npm',
       addLocalPluginForm: {
         path: '',
         name: ''

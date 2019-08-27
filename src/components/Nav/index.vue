@@ -5,14 +5,6 @@
     </el-menu-item>
     <el-menu-item index="plugins">Dashboard</el-menu-item>
     <el-menu-item :index="plugin.name" :key="plugin.name" :route="{name: 'pluginPage', query: {name: plugin.name}}" v-for="plugin in pluginList">{{ plugin.name }}</el-menu-item>
-    <el-dropdown class="project-selector" trigger="click">
-      <el-button type="danger">
-        No project<i class="el-icon-arrow-down el-icon--right"></i>
-      </el-button>
-      <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item>Project Manager</el-dropdown-item>
-      </el-dropdown-menu>
-    </el-dropdown>
   </el-menu>
 </template>
 
