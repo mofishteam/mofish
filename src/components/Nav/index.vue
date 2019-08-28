@@ -1,6 +1,6 @@
 <template>
   <el-menu :router="true" :default-active="activeIndex" class="top-nav" mode="horizontal" @select="handleSelect">
-    <el-menu-item index="index">
+    <el-menu-item index="index" class="home-index-menu-item">
       <logo></logo>
     </el-menu-item>
     <el-menu-item :index="plugin.name" :key="plugin.name" :route="{name: 'pluginPage', query: {name: plugin.name}}" v-for="plugin in pluginList">{{ plugin.name }}</el-menu-item>
@@ -49,6 +49,11 @@ export default {
       right: 20px;
       top: 30px;
       transform: translateY(-50%);
+    }
+    .home-index-menu-item {
+      &.el-menu-item.is-active {
+        border-bottom: 0;
+      }
     }
   }
 </style>
