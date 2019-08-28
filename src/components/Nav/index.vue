@@ -1,9 +1,8 @@
 <template>
   <el-menu :router="true" :default-active="activeIndex" class="top-nav" mode="horizontal" @select="handleSelect">
-    <el-menu-item index="plugins">
+    <el-menu-item index="index">
       <logo></logo>
     </el-menu-item>
-    <el-menu-item index="plugins">Dashboard</el-menu-item>
     <el-menu-item :index="plugin.name" :key="plugin.name" :route="{name: 'pluginPage', query: {name: plugin.name}}" v-for="plugin in pluginList">{{ plugin.name }}</el-menu-item>
   </el-menu>
 </template>
@@ -15,7 +14,7 @@ export default {
   name: 'Nav',
   data () {
     return {
-      activeIndex: 'plugins'
+      activeIndex: 'index'
     }
   },
   async created () {
@@ -23,7 +22,7 @@ export default {
     if (this.$route.name === 'pluginPage') {
       this.activeIndex = this.$route.query.name
     } else {
-      this.activeIndex = 'plugins'
+      this.activeIndex = 'index'
     }
   },
   methods: {

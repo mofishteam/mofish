@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home'
+import HomeIndex from './views/Home/Index/index'
 import HomePlugins from './views/Home/Plugins'
 import PluginPage from './views/PluginPage/index'
 
@@ -13,9 +14,13 @@ export default new Router({
       name: 'home',
       component: Home,
       redirect: {
-        name: 'homePlugins'
+        name: 'homeIndex'
       },
       children: [{
+        name: 'homeIndex',
+        component: HomeIndex,
+        path: 'index'
+      }, {
         name: 'homePlugins',
         component: HomePlugins,
         path: 'plugins'
