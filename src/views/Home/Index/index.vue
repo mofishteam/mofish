@@ -13,15 +13,23 @@
       <el-col span="12">
         <el-card shadow="hover">
           <p class="intro-title text-main-black">Welcome to use Mofish.</p>
-<!--          <p class="intro-text text-common-black">Current Mofish Version: <span class="text-success">1.0.0</span></p>-->
-          <p class="intro-text text-common-black" :key="$index" v-for="(plugin, $index) in pluginList">Plugin {{plugin.name}} Version: <span class="text-success">{{((plugin || {}).info || {}).packageJson | filterVersion}}</span></p>
+          <p class="intro-text">
+            <span>To add or remove plugins, </span>
+            <router-link :to="{name: 'homePlugins'}">
+              <el-link type="primary">click here</el-link>
+            </router-link>
+            <span>.</span></p>
         </el-card>
       </el-col>
-<!--      <el-col span="12">-->
-<!--        <el-card shadow="hover">-->
-<!--&lt;!&ndash;          <p class="intro-title text-main-black">Plugins</p>&ndash;&gt;-->
-<!--        </el-card>-->
-<!--      </el-col>-->
+      <el-col span="12">
+        <el-card shadow="hover">
+          <p class="intro-title text-main-black">Plugins</p>
+          <p class="intro-text text-common-black">Current Mofish Version: <span class="text-success">{{mofishVersion}}</span></p>
+          <p class="intro-text text-common-black" :key="$index" v-for="(plugin, $index) in pluginList">
+            Plugin <span class="plugin-name">{{plugin.name}}</span> Version: <span class="text-success">{{((plugin || {}).info || {}).packageJson | filterVersion}}</span>
+          </p>
+        </el-card>`
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -41,7 +49,8 @@ export default {
   },
   computed: {
     ...mapGetters({
-      pluginList: 'getPlugins'
+      pluginList: 'getPlugins',
+      mofishVersion: 'getMofishVersion'
     })
   }
 }
@@ -101,6 +110,9 @@ export default {
       & + .intro-text {
         margin-top: 10px;
       }
+    }
+    .plugin-name {
+      text-decoration: underline;
     }
   }
 </style>

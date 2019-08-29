@@ -15,11 +15,13 @@ export default {
   },
   methods: {
     ...mapActions([
-      'refreshPlugins'
+      'refreshPlugins',
+      'refreshMofishVersion'
     ])
   },
   created () {
     this.refreshPlugins()
+    this.refreshMofishVersion()
   }
 }
 </script>

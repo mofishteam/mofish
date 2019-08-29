@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { getPlugins } from '@/api/service/plugins'
+import { getPlugins, getMofishVersion } from '@/api/service/plugins'
 import { getProjects } from '@/api/service/projects'
 
 Vue.use(Vuex)
@@ -8,7 +8,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     plugins: [],
-    projects: []
+    projects: [],
+    mofishVersion: ''
   },
   mutations: {
     SET_PLUGINS (state, val) {
@@ -16,6 +17,9 @@ export default new Vuex.Store({
     },
     SET_PROJECTS (state, val) {
       state.projects = val
+    },
+    SET_MOFISH_VERSION (state, val) {
+      state.mofishVersion = val
     }
   },
   actions: {
@@ -32,6 +36,13 @@ export default new Vuex.Store({
           commit('SET_PROJECTS', res.data)
         }
       })
+    },
+    refreshMofishVersion ({ commit }) {
+      getMofishVersion().then(res => {
+        if (!res.result) {
+          commit('SET_MOFISH_VERSION', res.data)
+        }
+      })
     }
   },
   getters: {
@@ -40,6 +51,9 @@ export default new Vuex.Store({
     },
     getProjects (state) {
       return state.projects
+    },
+    getMofishVersion (state) {
+      return state.mofishVersion || ''
     }
   }
 })

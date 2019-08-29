@@ -11,3 +11,7 @@ export const addPlugin = (params) => {
 export const deletePlugin = (params) => {
   return axios.delete(`/api/plugins/delete?name=${params.name}`)
 }
+
+export const getMofishVersion = (params) => {
+  return axios.get('/api/mofish/version')
+}
