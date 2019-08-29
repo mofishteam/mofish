@@ -16,12 +16,16 @@ export default {
   methods: {
     ...mapActions([
       'refreshPlugins',
-      'refreshMofishVersion'
+      'refreshMofishInfo',
+      'refreshOnlinePlugins',
+      'refreshLocalPlugins'
     ])
   },
   created () {
     this.refreshPlugins()
-    this.refreshMofishVersion()
+    this.refreshMofishInfo()
+    this.refreshOnlinePlugins()
+    this.refreshLocalPlugins()
   }
 }
 </script>

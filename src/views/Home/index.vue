@@ -4,7 +4,7 @@
       <el-menu :default-active="$route.name" class="home-page-menu" :router="true">
         <el-menu-item index="homeIndex" :route="{name: 'homeIndex'}">
           <i class="el-icon-s-home"></i>
-          <span>Home</span>
+          <span>Dashboard</span>
         </el-menu-item>
         <el-menu-item index="homePlugins" :route="{name: 'homePlugins'}">
           <i class="el-icon-s-open"></i>

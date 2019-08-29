@@ -1,6 +1,6 @@
 <template>
-  <div class="plugin-page">
-    <iframe v-if="plugin && plugin.info && plugin.info.frontend" :src="plugin.info.frontend" frameborder="0"></iframe>
+  <div class="plugin-page" v-loading="isLoading">
+    <iframe v-if="plugin && plugin.info && plugin.info.frontend" :src="plugin.info.frontend" frameborder="0" @load="onReady"></iframe>
   </div>
 </template>
 
@@ -8,6 +8,16 @@
 import { mapGetters } from 'vuex'
 export default {
   name: 'PluginPage',
+  data () {
+    return {
+      isLoading: true
+    }
+  },
+  methods: {
+    onReady () {
+      this.isLoading = false
+    }
+  },
   computed: {
     ...mapGetters({
       pluginList: 'getPlugins'

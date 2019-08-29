@@ -99,7 +99,6 @@
 
 <script>
 import { addPlugin, deletePlugin } from '@/api/service/plugins'
-import { searchPackages, getLocalPackages } from '@/api/service/packages'
 import { mapActions, mapGetters } from 'vuex'
 export default {
   name: 'HomePlugins',
@@ -114,9 +113,7 @@ export default {
       addLocalPluginForm: {
         path: '',
         name: ''
-      },
-      npmList: [],
-      localList: []
+      }
     }
   },
   methods: {
@@ -201,22 +198,12 @@ export default {
   },
   computed: {
     ...mapGetters({
-      pluginList: 'getPlugins'
+      pluginList: 'getPlugins',
+      npmList: 'getOnlinePlugins',
+      localList: 'getLocalPlugins'
     })
   },
   created () {
-    searchPackages({
-      name: 'mofish-plugin-'
-    }).then(res => {
-      if (res.data) {
-        this.npmList = res.data
-      }
-    })
-    getLocalPackages().then(res => {
-      if (res.data) {
-        this.localList = res.data
-      }
-    })
   }
 }
 </script>

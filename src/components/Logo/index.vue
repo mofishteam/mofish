@@ -53,7 +53,6 @@ export default {
       this.ctx.save()
       if (this.points && this.points.length) {
         for (let colIndex = 0; colIndex < this.points.length - 1; colIndex++) {
-          console.log(colIndex)
           this.ctx.beginPath()
           this.ctx.moveTo(...this.points[colIndex][0])
           this.points[colIndex][1] && this.ctx.lineTo(...this.points[colIndex][1])
