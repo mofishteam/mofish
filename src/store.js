@@ -37,14 +37,14 @@ export default new Vuex.Store({
   },
   actions: {
     refreshPlugins ({ commit }) {
-      getPlugins().then(res => {
+      return getPlugins().then(res => {
         if (!res.result) {
           commit('SET_PLUGINS', res.data)
         }
       })
     },
     refreshProjects ({ commit }) {
-      getProjects().then(res => {
+      return getProjects().then(res => {
         if (!res.result) {
           commit('SET_PROJECTS', res.data)
         }
@@ -52,7 +52,7 @@ export default new Vuex.Store({
     },
     refreshOnlinePlugins ({ commit }) {
       commit('SET_ONLINE_PLUGINS', null)
-      searchPackages({
+      return searchPackages({
         name: 'mofish-plugin-'
       }).then(res => {
         if (res.data) {
@@ -62,7 +62,7 @@ export default new Vuex.Store({
     },
     refreshLocalPlugins ({ commit }) {
       commit('SET_LOCAL_PLUGINS', null)
-      getLocalPackages().then(res => {
+      return getLocalPackages().then(res => {
         if (res.data) {
           commit('SET_LOCAL_PLUGINS', res.data)
         }
