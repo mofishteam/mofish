@@ -13,13 +13,16 @@
   ],
   "private": false,
   "scripts": {
-    "dev:server": "nodemon server/index.js --watch server --port 8888 --exec \"npm run lint:server && babel-node --presets env --plugins babel-plugin-syntax-object-rest-spread\"",
+    "dev:server": "nodemon server/entry/index.js --watch server --port 8888 --exec \"npm run lint:server && babel-node --presets env --plugins babel-plugin-syntax-object-rest-spread\"",
+    "dev:command": "nodemon server/entry/index.js --watch server --port 8888 --exec \"npm run lint:server && babel-node --presets env --plugins babel-plugin-syntax-object-rest-spread\"",
     "dev:plugin": "babel-node --presets env --plugins babel-plugin-syntax-object-rest-spread -- server/dev/index.js",
-    "test:exec": "babel-node --presets env -- server/index.js",
+    "test:exec": "babel-node --presets env --plugins babel-plugin-syntax-object-rest-spread -- server/entry/index.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build:all": "npm run build && npm run build:server",
     "build:server": "babel server --presets env --plugins babel-plugin-syntax-object-rest-spread --out-dir server-dist",
+    "publish": "npm run build:all && npm publish",
+    "publish:beta": "npm run build:all && npm publish --tag=beta",
     "lint": "vue-cli-service lint",
     "lint:server": "eslint server",
     "test:unit": "vue-cli-service test:unit"

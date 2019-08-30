@@ -1,8 +1,7 @@
 // import config from './config'
 import '@babel/polyfill'
+import './utils/commander'
 import { getConfig } from './utils/configs'
-import commander from 'commander'
-import PackageConfig from '../package'
 import { getValidPort } from './utils/portInUsed'
 import loadPlugins from './utils/loadPlugins'
 import PluginsRouter from './router/plugins'
@@ -21,15 +20,7 @@ import eventBus from './utils/eventBus'
 import Koa from 'koa'
 import bodyParser from 'koa-bodyparser'
 // import koaStatic from 'koa-static'
-
-// 解析命令行参数
-commander.version(`Version: ${PackageConfig.version}`)
-  .option('-p, --port [port]', 'Set port for Frame Process.')
-  .option('--dev', 'Development mode.')
-commander.parse(process.argv)
-global.commander = commander;
-
-(async function () {
+export default async function () {
   // console.log(await libnpmsearch('vue'))
   const settings = getConfig()
   global.settings = settings
@@ -39,8 +30,8 @@ global.commander = commander;
 
   await loadPlugins(settings)
 
-  const config = getGlobalConfig(commander.dev)
-  if (commander.dev) {
+  const config = getGlobalConfig(global.commander.dev)
+  if (global.commander.dev) {
     console.log('Mofish is running in Development Mode.')
   } else {
     app.use(Static(config.frontendPath))
@@ -59,11 +50,11 @@ global.commander = commander;
     .use(MofishRouter.routes())
     .use(MofishRouter.allowedMethods())
 
-  const port = await getValidPort(settings.port || commander.port || 8080)
+  const port = await getValidPort(settings.port || global.commander.port || 8080)
   app.listen(port)
   eventBus.$emit('serverStart', {
     port
   })
 
   console.log(`App is started at port ${port}`)
-})()
+}
