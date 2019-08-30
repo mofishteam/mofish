@@ -60,6 +60,12 @@ export default {
       h5 {
         font-size: 16px;
       }
+      blockquote {
+        margin: 15px 0;
+        padding: 10px 20px;
+        background-color: lighten($third-level-border-color, 4%);
+        border-left: 3px solid $third-level-border-color;
+      }
     }
   }
 </style>
