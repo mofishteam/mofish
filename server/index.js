@@ -9,6 +9,7 @@ import PluginRouter from './router/plugin'
 import ProjectRouter from './router/projects'
 import PackageRouter from './router/packages'
 import MofishRouter from './router/mofish'
+import DocumentRouter from './router/document'
 import getGlobalConfig from './config/index'
 import Static from 'koa-static'
 import eventBus from './utils/eventBus'
@@ -49,6 +50,8 @@ export default async function () {
     .use(PackageRouter.allowedMethods())
     .use(MofishRouter.routes())
     .use(MofishRouter.allowedMethods())
+    .use(DocumentRouter.routes())
+    .use(DocumentRouter.allowedMethods())
 
   const port = await getValidPort(settings.port || global.commander.port || 8080)
   app.listen(port)

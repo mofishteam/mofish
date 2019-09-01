@@ -1,34 +1,31 @@
-# mofish
+# Introduction
 
-## Project setup
-```
-npm install
-```
+**Mofish** is a friendly Development tool platform.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# Usage
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Install
 
-### Run your tests
-```
-npm run test
-```
+> npm install mofish -g
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Start
 
-### Run your unit tests
-```
-npm run test:unit
-```
+> mofish
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+If you want to start with super user permission, you can also
+
+> sudo mofish
+
+# Fork and Dev
+
+## Start frontend develop
+
+> npm run serve
+
+## Start backend develop
+
+> npm run dev:server
+
+## Develop with plugin
+
+> npm run dev:plugin -- --plugin /your-plugin-dir-path [--port xxxx]

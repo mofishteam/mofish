@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home'
 import HomeIndex from './views/Home/Index/index'
 import HomePlugins from './views/Home/Plugins'
+import HomeDocument from './views/Home/Document'
 import PluginPage from './views/PluginPage/index'
 
 Vue.use(Router)
@@ -24,6 +25,10 @@ export default new Router({
         name: 'homePlugins',
         component: HomePlugins,
         path: 'plugins'
+      }, {
+        name: 'homeDocument',
+        component: HomeDocument,
+        path: 'documents'
       }]
     }, {
       path: '/plugin',
