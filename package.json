@@ -14,7 +14,8 @@
   "private": false,
   "scripts": {
     "dev:server": "nodemon server/entry/index.js --watch server --port 8888 --exec \"npm run lint:server && babel-node --presets env --plugins babel-plugin-syntax-object-rest-spread\"",
-    "dev:command": "nodemon server/entry/index.js --watch server --port 8888 --exec \"npm run lint:server && babel-node --presets env --plugins babel-plugin-syntax-object-rest-spread\"",
+    "dev:command": "babel-node --presets env --plugins babel-plugin-syntax-object-rest-spread -- server/entry/index.js",
+    "dev:command-index": "babel-node --presets env --plugins babel-plugin-syntax-object-rest-spread -- server/entry/dev.js",
     "dev:plugin": "babel-node --presets env --plugins babel-plugin-syntax-object-rest-spread -- server/dev/index.js",
     "test:exec": "babel-node --presets env --plugins babel-plugin-syntax-object-rest-spread -- server/entry/index.js",
     "serve": "vue-cli-service serve",
@@ -31,6 +32,7 @@
     "@babel/polyfill": "^7.4.4",
     "axios": "^0.19.0",
     "color": "^3.1.2",
+    "colors": "^1.3.3",
     "commander": "^2.20.0",
     "core-js": "^2.6.9",
     "element-ui": "^2.10.1",
