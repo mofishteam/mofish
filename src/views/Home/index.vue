@@ -63,6 +63,7 @@ export default {
 <style lang="scss">
   .home-page {
     &-content {
+      height: calc(100vh - 61px);
       padding: 20px;
     }
     &-menu {
