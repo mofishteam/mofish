@@ -61,7 +61,7 @@
             </router-link>
             <span> to add new plugin.</span>
           </p>
-        </el-card>`
+        </el-card>
       </el-col>
     </el-row>
   </div>
