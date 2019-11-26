@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="11de3ba6-0c16-44f4-ab4c-3be45e62cffb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/old/server/config/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/dev/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/mofish-dev.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/router/document.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/router/mofish.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/router/packages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/router/plugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/router/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/router/projects.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/utils/configs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/utils/eventBus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/utils/frontendStatic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/utils/fsExists.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/utils/getPackages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/utils/loadPlugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/utils/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/utils/portInUsed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/server/utils/response.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/api/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/api/interceptor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/api/service/documents.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/api/service/packages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/api/service/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/api/service/projects.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/assets/style/base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/assets/style/common.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/assets/style/reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/components/Logo/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/components/Nav/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/utils/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/views/Home/Document/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/views/Home/Index/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/views/Home/Plugins/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/views/Home/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old/src/views/PluginPage/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/api/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/api/interceptor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/api/service/documents.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/api/service/packages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/api/service/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/api/service/projects.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/assets/style/base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/assets/style/common.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/assets/style/reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/components/Logo/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/components/Nav/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/utils/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/views/Home/Document/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/views/Home/Index/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/views/Home/Plugins/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/views/Home/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/views/PluginPage/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/mofish" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dev/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/mofish-dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/router/document.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/router/mofish.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/router/packages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/router/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/router/plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/router/projects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/configs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/eventBus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/frontendStatic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/fsExists.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/getPackages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/loadPlugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/portInUsed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/response.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/interceptor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/documents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/packages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/projects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/style/base.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/style/common.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/style/reset.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Logo/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home/Document/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home/Index/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home/Plugins/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/PluginPage/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/example.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue.config.js" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/dist/" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/old/src/api/service/plugins.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/old/server/router/document.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/old/server/index.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-230">
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>9080</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/index.ejs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+        <option value="$PROJECT_DIR$/.idea/mofish.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
+        <option value="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="971" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mofish" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mofish" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mofish" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mofish" type="462c0819:PsiDirectoryNode" />
+              <item name="old" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mofish" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mofish" type="462c0819:PsiDirectoryNode" />
+              <item name="old" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mofish" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mofish" type="462c0819:PsiDirectoryNode" />
+              <item name="old" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="dev" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mofish" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mofish" type="462c0819:PsiDirectoryNode" />
+              <item name="old" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mofish" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mofish" type="462c0819:PsiDirectoryNode" />
+              <item name="old" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mofish" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mofish" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mofish" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mofish" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mofish" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mofish" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/old" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/old" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="11de3ba6-0c16-44f4-ab4c-3be45e62cffb" name="Default Changelist" comment="" />
+      <created>1574743251046</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574743251046</updated>
+      <workItem from="1574743253731" duration="1075000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1075000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="npm" side_tool="true" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32387474" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/static/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer_bk/assets/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer_bk/components/LandingPage/SystemInformation.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-870" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer_bk/components/LandingPage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-341">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/api/service/plugins.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer_bk/App.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/server/dev/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/src/api/service/plugins.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/server/router/document.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/server/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/index.dev.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-230">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
