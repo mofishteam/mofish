@@ -44,6 +44,7 @@ export default {
 
 <style lang="scss">
   .top-nav {
+    -webkit-app-region: drag;
     .project-selector {
       position: fixed;
       right: 20px;
