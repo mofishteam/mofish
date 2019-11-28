@@ -1,28 +1,66 @@
-# mofish
+# Introduction
 
-> A friendly Development tool platform.
+**Mofish** is a friendly Development tool platform.
 
-#### Build Setup
+# Usage
 
-``` bash
-# install dependencies
-npm install
+## Install
 
-# serve with hot reload at localhost:9080
-npm run dev
+> npm install mofish -g
 
-# build electron application for production
-npm run build
+## Start
 
-# run unit & end-to-end tests
-npm test
+> mofish
 
+If you want to start with super user permission, you can also
 
-# lint all JS/Vue component files in `src/`
-npm run lint
+> sudo mofish
 
-```
+# Fork and Dev
 
----
+## Start frontend develop
 
-This project was generated with [electron-vue](https://github.com/SimulatedGREG/electron-vue) using [vue-cli](https://github.com/vuejs/vue-cli). Documentation about the original structure can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
+> npm run serve
+
+## Start backend develop
+
+> npm run dev:server
+
+## Develop with plugin
+
+> npm run dev:plugin -- --plugin /your-plugin-dir-path [--port xxxx]
+
+## Plugin INIT Configs
+
+### name
+
+Name of plugin.
+
+### libs
+
+- Koa: Koa Class.
+- KoaStatic: KoaStatic Class.
+- KoaRouter: KoaRouter Class.
+
+### utils
+
+- lsof: As the shell command 'lsof', you can get process of which using the port.
+- response: Response Function for Koa Router, @params(status: status code in response body; data: response data; errorMessage: A string inserted when response has error). @example(response(200, {result: 0, data: '100'}, null))
+- check: A params check Function for Koa Router.
+- urlParse: A tool to parse url.
+- getConfig: A Function to get config of plugin its own.
+- setConfig: A Function to set config of plugin its own.
+- portIsOccupied: A Async Function to get to know if the port is already in used.
+- getValidPort: A Async Function to get a valid port, param is a port number, if the port is in used, the function will retun a new port number after the port you inputed.
+
+### eventBus
+
+An Object extended from Vue.
+
+### plugins
+
+A list of global plugins.
+
+### pluginObects
+
+A list of global plugin Objects.
