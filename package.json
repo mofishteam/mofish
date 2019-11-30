@@ -1,9 +1,5 @@
 {
   "name": "mofish",
-  "bin": {
-    "mofish": "bin/mofish",
-    "mofish-dev": "server-dist/dev/index.js"
-  },
   "main": "./dist-dev/dev.js",
   "version": "0.4.0",
   "files": [
