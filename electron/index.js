@@ -5,7 +5,7 @@ function createWindow () {
   let win = new BrowserWindow({
     width: 1000,
     height: 600,
-    titleBarStyle: 'hiddenInset',
+    titleBarStyle: 'hidden',
     webPreferences: {
       nodeIntegration: true
     }

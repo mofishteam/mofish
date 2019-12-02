@@ -1,5 +1,5 @@
-import Router from 'koa-router'
-import { response } from '../utils/response'
+import Router from '../utils/ipcRouter'
+// import { response } from '../utils/response'
 import fs from 'fs'
 import path from 'path'
 // import { setConfig, getConfig } from '../utils/configs'
@@ -8,12 +8,11 @@ const router = new Router()
 
 router.prefix('/api/document')
 
-router.get('/mofish', async (ctx, next) => {
-  response(ctx, 200, {
+router.set('/mofish', async (arg) => {
+  return {
     type: 'markdown',
     content: fs.readFileSync(path.join(__dirname, '../../README.md')).toString()
-  })
-  await next()
+  }
 })
 
 export default router

@@ -5,22 +5,22 @@ import commander from 'commander'
 import PackageConfig from '../package'
 import { getValidPort } from './utils/portInUsed'
 import loadPlugins from './utils/loadPlugins'
-import PluginsRouter from './router/plugins'
-import PluginRouter from './router/plugin'
-import ProjectRouter from './router/projects'
-import PackageRouter from './router/packages'
-import MofishRouter from './router/mofish'
+// import PluginsRouter from './router/plugins'
+// import PluginRouter from './router/plugin'
+// import ProjectRouter from './router/projects'
+// import PackageRouter from './router/packages'
+// import MofishRouter from './router/mofish'
 import DocumentRouter from './router/document'
-import getGlobalConfig from './config/index'
-import Static from 'koa-static'
+// import getGlobalConfig from './config/index'
+// import Static from 'koa-static'
 import eventBus from './utils/eventBus'
 // import Proxy from 'koa-server-http-proxy'
 // import { getLocalPackages } from './utils/getPackages'
 // import libnpmsearch from 'libnpmsearch'
 // import Mount from 'koa-mount'
 // import FrontendRouter from './router/frontend'
-import Koa from 'koa'
-import bodyParser from 'koa-bodyparser'
+// import Koa from 'koa'
+// import bodyParser from 'koa-bodyparser'
 // import koaStatic from 'koa-static'
 
 // 解析命令行参数
@@ -36,34 +36,35 @@ global.commander = commander;
   global.settings = settings
   global.eventBus = eventBus
 
-  const app = new Koa()
+  // const app = new Koa()
 
   await loadPlugins(settings)
 
-  const config = getGlobalConfig(commander.dev)
-  if (commander.dev) {
-    console.log('Mofish is running in Development Mode.')
-  } else {
-    app.use(Static(config.frontendPath))
-  }
+  // const config = getGlobalConfig(commander.dev)
+  // if (commander.dev) {
+  //   console.log('Mofish is running in Development Mode.')
+  // } else {
+  //   app.use(Static(config.frontendPath))
+  // }
 
-  app
-    .use(bodyParser())
-    .use(PluginsRouter.routes())
-    .use(PluginsRouter.allowedMethods())
-    .use(PluginRouter.routes())
-    .use(PluginRouter.allowedMethods())
-    .use(ProjectRouter.routes())
-    .use(ProjectRouter.allowedMethods())
-    .use(PackageRouter.routes())
-    .use(PackageRouter.allowedMethods())
-    .use(MofishRouter.routes())
-    .use(MofishRouter.allowedMethods())
-    .use(DocumentRouter.routes())
-    .use(DocumentRouter.allowedMethods())
+  // app
+  //   .use(bodyParser())
+  //   .use(PluginsRouter.routes())
+  //   .use(PluginsRouter.allowedMethods())
+  //   .use(PluginRouter.routes())
+  //   .use(PluginRouter.allowedMethods())
+  //   .use(ProjectRouter.routes())
+  //   .use(ProjectRouter.allowedMethods())
+  //   .use(PackageRouter.routes())
+  //   .use(PackageRouter.allowedMethods())
+  //   .use(MofishRouter.routes())
+  //   .use(MofishRouter.allowedMethods())
+  //   .use(DocumentRouter.routes())
+  //   .use(DocumentRouter.allowedMethods())
+  DocumentRouter.register()
 
   const port = await getValidPort(settings.port || commander.port || 8080)
-  app.listen(port)
+  // app.listen(port)
   eventBus.$emit('serverStart', {
     port
   })

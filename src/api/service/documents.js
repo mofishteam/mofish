@@ -1,5 +1,5 @@
-import axios from '../index'
+import ipc from '../ipc'
 
 export const getDocument = (params) => {
-  return axios.get(`/api/document/${params.name}`)
+  return ipc(`/api/document/${params.name}`)
 }
