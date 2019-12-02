@@ -53,6 +53,7 @@ export default {
       transform: translateY(-50%);
     }
     .home-index-menu-item {
+      -webkit-app-region: no-drag;
       &.el-menu-item.is-active {
         border-bottom: 0;
       }
