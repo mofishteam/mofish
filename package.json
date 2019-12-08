@@ -10,15 +10,10 @@
   ],
   "private": false,
   "scripts": {
-    "dev:server": "nodemon server/index.js --watch server --port 8888 --exec \"npm run lint:server && babel-node --presets env --plugins babel-plugin-syntax-object-rest-spread\"",
-    "dev:plugin": "babel-node --presets env --plugins babel-plugin-syntax-object-rest-spread -- server/dev/index.js",
     "dev:electron": "nodemon --watch electron --watch server --exec \"npm run lint:electron && mkdir -p dist && babel electron --presets env --plugins babel-plugin-syntax-object-rest-spread --out-dir ./dist-dev && ./node_modules/.bin/electron .\"",
     "dev:both": "npm run serve & npm run dev:electron",
-    "test:exec": "babel-node --presets env -- server/index.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:all": "npm run build && npm run build:server",
-    "build:server": "babel server --presets env --plugins babel-plugin-syntax-object-rest-spread --out-dir server-dist",
     "build:electron": "electron-builder --win --x64",
     "build:both": "npm run build && npm run build:electron",
     "lint": "vue-cli-service lint",
@@ -86,11 +81,6 @@
     "vue-template-compiler": "^2.6.10",
     "webpack-cli": "^3.3.6"
   },
-  "keywords": [
-    "development",
-    "frontend",
-    "tool"
-  ],
   "author": {
     "name": "wszxdhr",
     "email": "wszxdhr@126.com"
