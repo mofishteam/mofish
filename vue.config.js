@@ -2,6 +2,8 @@ module.exports = {
   productionSourceMap: false,
   configureWebpack: (config) => {
     config.devtool = 'source-map'
+    config.externals = {
+    }
   },
   devServer: {
     port: 8908
