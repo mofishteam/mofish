@@ -61,6 +61,7 @@ global.commander = commander;
   //   .use(MofishRouter.allowedMethods())
   //   .use(DocumentRouter.routes())
   //   .use(DocumentRouter.allowedMethods())
+  console.log(DocumentRouter)
   DocumentRouter.register()
 
   const port = await getValidPort(settings.port || commander.port || 8080)

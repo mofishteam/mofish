@@ -3,6 +3,7 @@ module.exports = {
   configureWebpack: (config) => {
     config.devtool = 'source-map'
     config.externals = {
+      electron: 'electron'
     }
   },
   devServer: {
