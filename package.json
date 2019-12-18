@@ -6,6 +6,7 @@
     "dist",
     "bin",
     "server-dist",
+    "electron-dist",
     "LICENSE"
   ],
   "private": false,
