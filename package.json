@@ -11,7 +11,7 @@
   ],
   "private": false,
   "scripts": {
-    "dev:electron": "nodemon --watch electron --watch server --exec \"npm run lint:electron && mkdir -p dist && babel electron --presets env --plugins babel-plugin-syntax-object-rest-spread --out-dir ./dist-dev && ./node_modules/.bin/electron .\"",
+    "dev:electron": "nodemon --watch electron --watch server --exec \"npm run lint:electron && mkdir -p dist && babel server --presets env --plugins babel-plugin-syntax-object-rest-spread --out-dir ./dist-server && babel electron --presets env --plugins babel-plugin-syntax-object-rest-spread --out-dir ./dist-dev && ./node_modules/.bin/electron .\"",
     "dev:both": "npm run serve & npm run dev:electron",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
