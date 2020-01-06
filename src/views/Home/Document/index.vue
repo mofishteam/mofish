@@ -22,7 +22,7 @@ export default {
   created () {
     getDocument({ name: this.$route.query.doc }).then(res => {
       if (!res.result) {
-        this.markdownContent = markdown.toHTML(res.data.content)
+        this.markdownContent = markdown.toHTML(res.content)
         this.$nextTick(() => {
           document.querySelectorAll('.home-document code').forEach((block) => {
             hljs.highlightBlock(block)

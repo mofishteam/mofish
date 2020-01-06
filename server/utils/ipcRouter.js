@@ -16,7 +16,7 @@ export default class IpcRouter {
   register () {
     ipcMain.on(this.ipcName, async (e, args) => {
       console.log(args)
-      e.returnValue = this.handler(args)
+      e.returnValue = await this.handler(args)
     })
   }
 }
