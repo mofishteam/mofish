@@ -1,7 +1,8 @@
 import axios from '../index'
+import ipc from '@/api/ipc'
 
 export const searchPackages = (params) => {
-  return axios.get(`/package/online?name=${params.name}`)
+  return ipc(`/package/online?name=${params.name}`)
 }
 
 export const getLocalPackages = (params) => {
