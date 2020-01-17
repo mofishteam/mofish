@@ -1,14 +1,14 @@
 <template>
   <el-menu :router="true" :default-active="activeIndex" class="top-nav" mode="horizontal" @select="handleSelect">
-    <el-menu-item index="index" class="home-index-menu-item">
-      <logo></logo>
-    </el-menu-item>
+<!--    <el-menu-item index="index" class="home-index-menu-item">-->
+<!--      <logo></logo>-->
+<!--    </el-menu-item>-->
     <el-menu-item :index="plugin.name" :key="plugin.name" :route="{name: 'pluginPage', query: {name: plugin.name}}" v-for="plugin in pluginList">{{ plugin.name }}</el-menu-item>
   </el-menu>
 </template>
 
 <script>
-import Logo from '@/components/Logo'
+// import Logo from '@/components/Logo'
 import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'Nav',
@@ -37,7 +37,7 @@ export default {
     })
   },
   components: {
-    Logo
+    // Logo
   }
 }
 </script>
@@ -46,6 +46,7 @@ export default {
   .top-nav {
     -webkit-app-region: drag;
     -webkit-user-select: none;
+    height: 50px;
     .project-selector {
       position: fixed;
       right: 20px;
