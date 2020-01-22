@@ -3,6 +3,10 @@ import Vuex from 'vuex'
 import { getPlugins, getMofishVersion } from '@/api/service/plugins'
 import { searchPackages, getLocalPackages } from '@/api/service/packages'
 import { getProjects } from '@/api/service/projects'
+import electron from 'electron'
+import config from '@/config/index'
+import readFile from '@/utils/readFile'
+const path = electron.remote.require('path')
 
 Vue.use(Vuex)
 
@@ -13,7 +17,8 @@ export default new Vuex.Store({
     localPlugins: null,
     projects: [],
     mofishVersion: '',
-    mofishOnlineInfo: null
+    mofishOnlineInfo: null,
+    mofishConfig: {}
   },
   mutations: {
     SET_PLUGINS (state, val) {
@@ -33,7 +38,8 @@ export default new Vuex.Store({
     },
     SET_LOCAL_PLUGINS (state, val) {
       state.localPlugins = val
-    }
+    },
+    REFRESH_MOFISH_CONFIG (state) {}
   },
   actions: {
     refreshPlugins ({ commit }) {
@@ -86,6 +92,13 @@ export default new Vuex.Store({
       }).catch(() => {
         commit('SET_MOFISH_ONLINE_INFO', 'failed')
       })
+    },
+    async refreshMofishConfig ({ commit }) {
+      console.log('refreshMofishConfig')
+      console.log(await readFile(path.join(config.dataPath, 'config.json'), 'json').catch(err => {
+        console.log(err)
+      }))
+      commit('REFRESH_MOFISH_CONFIG')
     }
   },
   getters: {
@@ -106,6 +119,12 @@ export default new Vuex.Store({
     },
     getOnlinePlugins (state) {
       return state.onlinePlugins
+    },
+    getMofishConfig (state) {
+      return state.mofishConfig
     }
+  },
+  modules: {
+    // mofishConfig: require('./modules/mofishConfig')
   }
 })

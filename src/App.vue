@@ -19,10 +19,12 @@ export default {
       'refreshPlugins',
       'refreshMofishInfo',
       'refreshOnlinePlugins',
-      'refreshLocalPlugins'
+      'refreshLocalPlugins',
+      'refreshMofishConfig'
     ])
   },
   async created () {
+    this.refreshMofishConfig()
     this.refreshLocalPlugins()
     await this.refreshPlugins()
     this.refreshMofishInfo()

@@ -13,5 +13,6 @@ require('electron').app.on('ready', () => {
 
 const vueConfig = require('../vue.config')
 global.vuePort = vueConfig.devServer.port
+global.isDev = true
 // Require `main` process to boot app
 require('./index.js')
