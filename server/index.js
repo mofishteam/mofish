@@ -8,8 +8,8 @@ import loadPlugins from './utils/loadPlugins'
 // import PluginsRouter from './router/plugins'
 // import PluginRouter from './router/plugin'
 // import ProjectRouter from './router/projects'
-// import PackageRouter from './router/packages'
-// import MofishRouter from './router/mofish'
+import PackageRouter from './router/packages'
+import MofishRouter from './router/mofish'
 import DocumentRouter from './router/document'
 // import getGlobalConfig from './config/index'
 // import Static from 'koa-static'
@@ -63,6 +63,8 @@ global.commander = commander;
   //   .use(DocumentRouter.allowedMethods())
   console.log(DocumentRouter)
   DocumentRouter.register()
+  PackageRouter.register()
+  MofishRouter.register()
 
   const port = await getValidPort(settings.port || commander.port || 8080)
   // app.listen(port)

@@ -1,4 +1,5 @@
 import axios from '../index'
+import ipc from '@/api/ipc'
 
 export const getPlugins = (params) => {
   return axios.get('/api/plugins/list')
@@ -13,5 +14,5 @@ export const deletePlugin = (params) => {
 }
 
 export const getMofishVersion = (params) => {
-  return axios.get('/api/mofish/version')
+  return ipc('/api/mofish/version')
 }

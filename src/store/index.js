@@ -61,29 +61,32 @@ export default new Vuex.Store({
       return searchPackages({
         name: 'mofish-plugin-'
       }).then(res => {
-        if (res.data) {
-          commit('SET_ONLINE_PLUGINS', res.data)
+        console.log('refreshOnlinePlugins, ', res)
+        if (res instanceof Array) {
+          commit('SET_ONLINE_PLUGINS', res)
         }
       })
     },
     refreshLocalPlugins ({ commit }) {
       commit('SET_LOCAL_PLUGINS', null)
       return getLocalPackages().then(res => {
-        if (res.data) {
-          commit('SET_LOCAL_PLUGINS', res.data)
+        if (res instanceof Array) {
+          commit('SET_LOCAL_PLUGINS', res)
         }
       })
     },
     async refreshMofishInfo ({ commit }) {
       commit('SET_MOFISH_ONLINE_INFO', 'checking')
       await getMofishVersion().then(res => {
-        if (!res.result) {
-          commit('SET_MOFISH_VERSION', res.data)
+        if (res) {
+          console.log(res)
+          commit('SET_MOFISH_VERSION', res)
         }
       })
       await searchPackages({ name: 'mofish' }).then(res => {
-        if (!res.result && res.data && res.data.length) {
-          for (const item of res.data) {
+        console.log(res)
+        if (res instanceof Array) {
+          for (const item of res) {
             if (item.name === 'mofish') {
               commit('SET_MOFISH_ONLINE_INFO', item)
             }

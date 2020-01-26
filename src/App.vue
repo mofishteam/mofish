@@ -8,7 +8,7 @@
 <script>
 import NavHeader from '@/components/Nav/index.vue'
 import { mapActions } from 'vuex'
-import { sleep } from '@/utils/index.js'
+// import { sleep } from '@/utils/index.js'
 export default {
   name: 'App',
   components: {
@@ -24,11 +24,13 @@ export default {
     ])
   },
   async created () {
+    console.log('App.vue created')
     this.refreshMofishConfig()
     this.refreshLocalPlugins()
-    await this.refreshPlugins()
+    // await this.refreshPlugins()
     this.refreshMofishInfo()
-    await sleep(2000)
+    // await sleep(2000)
+    console.log('before refreshOnlinePlugins')
     await this.refreshOnlinePlugins()
   }
 }
