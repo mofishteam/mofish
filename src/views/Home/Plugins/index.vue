@@ -39,7 +39,9 @@
                 <el-input v-model="addLocalPluginForm.name" placeholder="Name for plugin."></el-input>
               </el-form-item>
               <el-form-item label="Path" required>
-                <el-input v-model="addLocalPluginForm.path" placeholder="Please input a absolute path."></el-input>
+                <el-input v-model="addLocalPluginForm.path" placeholder="Please input a absolute path.">
+                  <el-button slot="suffix" type="text" icon="el-icon-folder" @click="getFolderPath">Open Folder</el-button>
+                </el-input>
               </el-form-item>
               <el-form-item class="tal">
                 <el-button type="primary" @click="addLocalPlugin({})">Add plugin</el-button>
@@ -47,7 +49,7 @@
               </el-form-item>
             </el-form>
           </el-tab-pane>
-          <el-tab-pane label="NPM" name="npm">
+          <el-tab-pane label="Online" name="npm">
 <!--            <el-input :debounce="500" placeholder="Input name to search plugins." v-model="pluginSearchParam" class="plugin-search-input"></el-input>-->
             <p class="text-secondary-black tac">Installed Local</p>
             <el-table :data="localList" style="width: 100%" :show-header="false">
@@ -68,7 +70,7 @@
                 </template>
               </el-table-column>
             </el-table>
-            <p class="text-secondary-black tac">NPM Online</p>
+            <p class="text-secondary-black tac">Online</p>
             <el-table :data="npmList" style="width: 100%" :show-header="false">
               <el-table-column prop="name"></el-table-column>
               <el-table-column
@@ -100,6 +102,7 @@
 <script>
 import { addPlugin, deletePlugin } from '@/api/service/plugins'
 import { mapActions, mapGetters } from 'vuex'
+import { getFilePath } from '@/api/service/files'
 export default {
   name: 'HomePlugins',
   data () {
@@ -193,6 +196,14 @@ export default {
             this.refreshPlugins()
           }
         })
+      })
+    },
+    getFolderPath () {
+      getFilePath({
+        title: 'Please select a folder',
+        properties: ['openDirectory']
+      }).then(res => {
+        console.log(res)
       })
     }
   },

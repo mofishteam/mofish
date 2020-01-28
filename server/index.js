@@ -11,6 +11,7 @@ import loadPlugins from './utils/loadPlugins'
 import PackageRouter from './router/packages'
 import MofishRouter from './router/mofish'
 import DocumentRouter from './router/document'
+import FilesRouter from './router/files'
 // import getGlobalConfig from './config/index'
 // import Static from 'koa-static'
 import eventBus from './utils/eventBus'
@@ -65,6 +66,7 @@ global.commander = commander;
   DocumentRouter.register()
   PackageRouter.register()
   MofishRouter.register()
+  FilesRouter.register()
 
   const port = await getValidPort(settings.port || commander.port || 8080)
   // app.listen(port)
