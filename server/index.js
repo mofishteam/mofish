@@ -62,7 +62,6 @@ global.commander = commander;
   //   .use(MofishRouter.allowedMethods())
   //   .use(DocumentRouter.routes())
   //   .use(DocumentRouter.allowedMethods())
-  console.log(DocumentRouter)
   DocumentRouter.register()
   PackageRouter.register()
   MofishRouter.register()
