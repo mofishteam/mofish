@@ -40,7 +40,7 @@ export default {
     iframe {
       display: block;
       width: 100%;
-      height: calc(100vh - 61px);
+      height: calc(100vh - 51px);
     }
   }
 </style>
