@@ -3,7 +3,7 @@ import '@babel/polyfill'
 import { getConfig } from './utils/configs'
 import commander from 'commander'
 import PackageConfig from '../package'
-import { getValidPort } from './utils/portInUsed'
+// import { getValidPort } from './utils/portInUsed'
 import loadPlugins from './utils/loadPlugins'
 // import PluginsRouter from './router/plugins'
 // import PluginRouter from './router/plugin'
@@ -67,11 +67,11 @@ global.commander = commander;
   MofishRouter.register()
   FilesRouter.register()
 
-  const port = await getValidPort(settings.port || commander.port || 8080)
+  // const port = await getValidPort(settings.port || commander.port || 8080)
   // app.listen(port)
-  eventBus.$emit('serverStart', {
-    port
-  })
+  // eventBus.$emit('serverStart', {
+  //   port
+  // })
 
-  console.log(`App is started at port ${port}`)
+  // console.log(`App is started at port ${port}`)
 })()
