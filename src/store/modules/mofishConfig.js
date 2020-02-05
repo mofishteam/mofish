@@ -15,7 +15,7 @@ export default new Vuex.Store({
     async refreshMofishConfig ({ commit }) {
       console.log('refreshMofishConfig')
       console.log(await readFile(path.join(config.dataPath, 'config.json')).catch(err => {
-        console.log(err)
+        console.error(err)
       }))
       commit('REFRESH_MOFISH_CONFIG')
     }
